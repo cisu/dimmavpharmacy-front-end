@@ -1,0 +1,45 @@
+.about {
+    background: var(--mainWhite);
+  }
+  /* section added to globals */
+  /* title added to globals */
+  /* section center added to globals */
+  .about-img,
+  .about-info {
+    margin-bottom: 4rem;
+  }
+  .about-info h3 {
+    text-transform: uppercase;
+  }
+  @media screen and (min-width: 992px) {
+    .about-center {
+      /* flex parent */
+      display: flex;
+      justify-content: space-between;
+    }
+    .about-img,
+    .about-info {
+      /* children */
+      flex: 0 0 calc(50% - 2rem);
+      align-self: center;
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1170px) {
+    .about-img::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 0.5rem solid var(--primaryColor);
+      top: -1.5rem;
+      left: -1.5rem;
+      border-radius: var(--borderRadius);
+    }
+    .about-img {
+      position: relative;
+    }
+    .about-photo {
+      position: relative;
+    }
+  }

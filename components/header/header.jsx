@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import styles from './header.module.scss'
 import Link from 'next/link';
-import MobileNav from './mobileNav/mobileNav';
 import {MenuItems} from '../../config/menuItems.js'
 
 const Header = () => {
