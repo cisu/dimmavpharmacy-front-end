@@ -1,43 +1,27 @@
 import React from 'react';
 import styles from './footer.module.scss';
 import Link from 'next/link';
+import {MenuItems} from '../../config/menuItems.js';
 
 const Footer = () => {
   return (
     <footer className={`section ${styles.footer}`}>
       {/* footer links */}
       <div className={styles['footer-links']}>
-        <a
-          href='#home'
-          className={`${styles['footer-link']} ${styles['scroll-link']}`}
-        >
-          Αρχική
-        </a>
-        <a
-          href='#about'
-          className={`${styles['footer-link']} ${styles['scroll-link']}`}
-        >
-          about
-        </a>
-        <a
-          href='#services'
-          className={`${styles['footer-link']} ${styles['scroll-link']}`}
-        >
-          services
-        </a>
-        <a
-          href='#featured'
-          className={`${styles['footer-link']} ${styles['scroll-link']}`}
-        >
-          featured
-        </a>
-        {/* <a
-          href='#gallery'
-          className={`${styles['footer-link']} ${styles['scroll-link']}`}
-          scroll-link
-        >
-          gallery
-        </a> */}
+        {MenuItems.map((item, index) => {
+          return (
+            <Link href={item.url} key={index}>
+              <a
+                className={`${styles['footer-link']} ${styles['scroll-link']}`}
+              >
+                {item.title}
+              </a>
+            </Link>
+          );
+        })}
+
+     
+      
       </div>
       {/* footer icons */}
       <div className='footer-icons'>

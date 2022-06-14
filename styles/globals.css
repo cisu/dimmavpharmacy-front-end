@@ -125,3 +125,18 @@ a {
 }
 
 
+
+
+/* swipper */
+
+.swiper-button-next, .swiper-button-prev{
+  color: var(--primaryColor) !important;
+}
+
+.swiper-pagination{
+  position: static  !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primaryColor) !important;
+}

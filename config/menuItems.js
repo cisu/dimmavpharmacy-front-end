@@ -5,14 +5,14 @@ export const MenuItems = [
     },
     {
         title: 'about',
-        url: '/',
+        url: '/about',
     },
     {
-        title: 'services',
-        url: '/',
+        title: 'blog',
+        url: '/blog',
     },
     {
         title: 'offers',
-        url: '/',
+        url: '/prosfores',
     }
 ]
