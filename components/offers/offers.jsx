@@ -23,7 +23,7 @@ const Offers = () => {
         {/* title  */}
         <div className='title-wrapper'>
           <h2 className='title'>
-            our <span className='subtitle'>services</span>
+            οι <span className='subtitle'>προσφορες μας</span>
           </h2>
         </div>
         {/* end of title  */}

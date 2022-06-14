@@ -1,0 +1,21 @@
+.featured-blog {
+  background: var(--mainWhite);
+}
+
+.tour-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.allBlogLink {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .featured-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

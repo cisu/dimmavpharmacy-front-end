@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+}
+
+.open{
+    margin-bottom: 0rem;
+}
+
+.address{
+    line-height: 2;
+    font-weight: 300;
+    display: flex;
+    address{
+        margin-left: 0.3rem;
+    }
+}
+
+.phone{
+    line-height: 2;
+    font-weight: 300;
+    display: flex;
+    a{
+        margin-left: 0.3rem;
+    }
+}
+
+
+.map{
+    iframe{
+        width: 100%;
+    }
+}

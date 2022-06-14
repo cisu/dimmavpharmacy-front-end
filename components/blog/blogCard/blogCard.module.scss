@@ -1,0 +1,86 @@
+.blogCard {
+    box-shadow: var(--lightShadow);
+    transition: var(--mainTransition);
+    margin-bottom: 4rem;
+    
+
+    &:hover{
+        box-shadow: var(--darkShadow);
+        cursor: pointer;
+    }
+  }
+
+
+   /* tour date */
+   .blogImgContainer {
+    position: relative;
+  }
+
+  .blogFooter {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .blogTitle {
+    text-transform: capitalize;
+  }
+
+  .blogInfo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .blogCategory {
+    color: var(--primaryColor);
+    text-transform: capitalize;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 0rem;
+    
+    span{
+      margin-right: 0.3rem;
+    }
+  }
+
+
+  .cardDate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--primaryColor);
+    color: var(--mainBlack);
+    text-transform: capitalize;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .cardDetails {
+    color: var(--darkGrey);
+    display: flex;
+    align-items: center;
+
+    p{
+        line-height: 0.2;
+        text-transform: capitalize;
+        color: var(--darkGrey);
+        letter-spacing: 0.02rem;
+        margin-bottom: 0rem;
+        margin-left: 0.3rem
+    }
+    
+  }
+ 
+
+
+  @media screen and (min-width: 768px) {
+   
+    .blogCard{
+      flex: 0 0 calc(50% - 1rem);
+    }
+  }
+  @media screen and (min-width: 1170px) {
+    .blogCard {
+      flex: 0 0 calc(33.3333% - 1rem);
+    }
+  }

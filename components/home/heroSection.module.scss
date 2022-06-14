@@ -16,7 +16,8 @@
     margin-bottom: 2rem;
     letter-spacing: 0.4rem;
     animation: slideFromRight 3s ease-in-out 1;
-  }
+    font-size: 3.5rem;
+ }
   .hero-text {
     width: 85%;
     margin: 0 auto;
@@ -29,6 +30,7 @@
 
   .hero-btn{
     animation: show 3s ease-in-out 1;
+    text-transform: none;
   }
   @media screen and (min-width: 768px) {
     .hero {

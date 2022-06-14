@@ -1,15 +1,18 @@
 import React from 'react';
-import styles from './about.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
+import {useRouter} from 'next/router';
+import styles from './about.module.scss';
 
 const About = () => {
+  const router = useRouter();
+
   return (
     <section className={`section ${styles.about}`} id='about'>
       {/* title  */}
       <div className={`title-wrapper`}>
         <h2 className='title'>
-          about <span className='subtitle'>us</span>
+          σχετικα με<span className='subtitle'> εμας</span>
         </h2>
       </div>
       {/* end of title  */}
@@ -23,33 +26,28 @@ const About = () => {
             alt='awesome beach'
           /> */}
 
-          <Image 
-          src='/images/about.jpg'
-          alt='awesome beach'
-          width={675}
-          height={510}
-          objectFit='cover'
+          <Image
+            src='/images/about.jpg'
+            alt='awesome beach'
+            width={675}
+            height={510}
+            objectFit='cover'
           />
         </div>
         {/* about info */}
         <article className={styles['about-info']}>
-          <h3>explore the difference</h3>
+          <h3>ΚΑΛΩΣ ΗΡΘΑΤΕ!</h3>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
-            quisquam harum nam cumque temporibus explicabo dolorum sapiente odio
-            unde dolor?
+          Όσον αφορά την φροντίδα σας ήρθατε στο σωστό μέρος. Το φαρμακείο μας σας παρέχει εμπεριστατωμένες συμβουλές υγείας και ομορφιάς ανάλογα με τις προσωπικές σας ανάγκες. Καλώς ήρθατε στο φαρμακείο της Δήμητρας Μαυρούλη!
           </p>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
-            quisquam harum nam cumque temporibus explicabo dolorum sapiente odio
-            unde dolor?
+          Όσον αφορά την φροντίδα σας ήρθατε στο σωστό μέρος. Το φαρμακείο μας σας παρέχει εμπεριστατωμένες συμβουλές υγείας και ομορφιάς ανάλογα με τις προσωπικές σας ανάγκες. Καλώς ήρθατε στο φαρμακείο της Δήμητρας Μαυρούλη!
           </p>
-          <Link  href='#'>
-            <a className='btn-primary'>
-              read more
-            </a>
-          </Link>
-         
+          {router.pathname !== '/about' && (
+            <Link href='/about'>
+              <a className={`btn-primary ${styles.btn}`} >Περισσότερα</a>
+            </Link>
+          )}
         </article>
       </div>
     </section>

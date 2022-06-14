@@ -7,13 +7,12 @@ const HeroSection = () => {
       {/* hero component */}
       <div className={styles.hero}>
         <div className={styles['hero-banner']}>
-          <h1 className={styles['hero-title']}>continue exploring</h1>
+          <h1 className={styles['hero-title']}>ΚΑΛΩΣ ΗΡΘΑΤΕ!</h1>
           <p className={styles['hero-text']}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-            explicabo debitis est autem dicta.
+          Όσον αφορά την φροντίδα σας ήρθατε στο σωστό μέρος. Το φαρμακείο μας σας παρέχει εμπεριστατωμένες συμβουλές υγείας και ομορφιάς ανάλογα με τις προσωπικές σας ανάγκες. Καλώς ήρθατε στο φαρμακείο της Δήμητρας Μαυρούλη!
           </p>
-          <a href='#featured' className={`btn btn-white scroll-link ${styles['hero-btn']}`}>
-            explore tours
+          <a href='tel:+302102825342' className={`btn btn-white scroll-link ${styles['hero-btn']}`}>
+          Καλέστε μας!
           </a>
         </div>
       </div>
