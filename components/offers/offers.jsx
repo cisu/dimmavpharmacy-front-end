@@ -13,7 +13,9 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
-const Offers = () => {
+const Offers = ({offers}) => {
+
+  // console.log('offers: ', offers);
 
 
   return (
@@ -39,12 +41,17 @@ const Offers = () => {
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="mySwiper"
       >
+        {offers?.data?.map((offer, index) => {
+          return(
+            <SwiperSlide key={index}><OfferCard offer={offer} /></SwiperSlide>
+          )
+        })}
+      
+        {/* <SwiperSlide><OfferCard /></SwiperSlide>
         <SwiperSlide><OfferCard /></SwiperSlide>
         <SwiperSlide><OfferCard /></SwiperSlide>
         <SwiperSlide><OfferCard /></SwiperSlide>
-        <SwiperSlide><OfferCard /></SwiperSlide>
-        <SwiperSlide><OfferCard /></SwiperSlide>
-        <SwiperSlide><OfferCard /></SwiperSlide>
+        <SwiperSlide><OfferCard /></SwiperSlide> */}
         
       </Swiper>
             

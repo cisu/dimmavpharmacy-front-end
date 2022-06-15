@@ -9,7 +9,8 @@ const Blog = ({blogs}) => {
   
   const router = useRouter();
 
-  console.log('router homePage: ', router.pathname);
+
+
 
   return (
     <>

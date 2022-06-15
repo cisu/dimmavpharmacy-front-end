@@ -2,25 +2,32 @@ import React from 'react';
 import styles from './offerCard.module.scss';
 import Image from 'next/image';
 
-const OfferCard = () => {
+const OfferCard = ({offer}) => {
+  console.log(
+    'offer :',
+    offer?.attributes?.image?.data?.attributes?.formats?.medium?.url
+  );
+
+  const image =
+    offer?.attributes?.image?.data?.attributes?.formats?.medium?.url;
+
   return (
     <div className={styles.cardContainer}>
-      <div className={styles.imageContainer}>
-        <Image
-          src='/images/IMG_20181018_133128.jpg'
-          width='991'
-          height='500'
-          alt='offer'
-          objectFit='cover'
-        />
-      </div>
+      {image && (
+        <div className={styles.imageContainer}>
+          <Image
+            src={image}
+            alt={offer?.attributes?.title}
+            width='700'
+            height='500'
+            objectFit='cover'
+          />
+        </div>
+      )}
 
       <div className={styles.textContainer}>
-        <p className={styles.text}>
-          Όλα τα αντηλιακά με μειον 50 τοις εκατό!!! Για λίγες μέρες μόνο!
-          Παρασκευή 30 Ιουλίου και Δευτέρα 02 Αυγούστου ​ Vichy Lierac La Roche
-          Posay Avene Frezyderm Bepanthol
-        </p>
+        <div dangerouslySetInnerHTML={{__html:offer?.attributes?.body }}/>
+        {/* <p className={styles.text}>{offer?.attributes?.body}</p> */}
       </div>
     </div>
   );

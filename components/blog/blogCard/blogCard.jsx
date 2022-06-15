@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const BlogCard = ({blog}) => {
-  console.log('blog:', blog);
+  console.log('BlogCard: ', blog)
 
   const category =
     blog?.attributes?.categories?.data?.[0]?.attributes?.category;

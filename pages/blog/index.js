@@ -1,25 +1,33 @@
-import React from 'react'
-import {useRouter} from 'next/router';
+import React from 'react';
 import Blog from '../../components/blog/blog';
+import {API_URL} from '../../config/urls';
+import qs from 'qs';
 
-export default function BlogPage() {
+export default function BlogPage(props) {
+  const blogs = props.blogs;
 
-
-  const router = useRouter()
-
-  console.log('router blogPage: ', router.pathname)
-  return (
-  //   <section className={`section `} id='about'>
-  //   {/* title  */}
-  //   <div className={`title-wrapper`}>
-  //     <h2 className='title'>
-  //       Ολα <span className='subtitle'>τα αρθρα</span>
-  //     </h2>
-  //   </div>
-  
-  // </section>
-
-  <Blog />
-  )
+  return <Blog blogs={blogs} />;
 }
 
+export async function getStaticProps() {
+  const queryBlog = qs.stringify(
+    {
+      sort: ['createdAt:asc'],
+      populate: '*',
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
+  const resBlog = await fetch(`${API_URL}/api/blogs?${queryBlog}`);
+
+  const blogs = await resBlog.json();
+
+  return {
+    props: {
+      blogs,
+    },
+    revalidate: 30,
+  };
+}
