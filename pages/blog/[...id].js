@@ -82,7 +82,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params: {id}}) {
-  console.log(id);
+
 
   const queryBlog = qs.stringify(
     {

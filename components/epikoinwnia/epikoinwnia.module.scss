@@ -1,7 +1,17 @@
+.sectionContainer{
+    // padding: 0rem 0.5rem
+}
+
 .container{
     display: flex;
     justify-content: space-around;
     margin-bottom: 4rem;
+    @media (max-width:991.5px){
+        flex-direction: column;
+        gap: 2rem 0.5rem;
+        align-items: flex-start;
+        justify-content: center;
+    }
 }
 
 .open{

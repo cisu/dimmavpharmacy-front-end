@@ -3,10 +3,7 @@ import styles from './offerCard.module.scss';
 import Image from 'next/image';
 
 const OfferCard = ({offer}) => {
-  console.log(
-    'offer :',
-    offer?.attributes?.image?.data?.attributes?.formats?.medium?.url
-  );
+ 
 
   const image =
     offer?.attributes?.image?.data?.attributes?.formats?.medium?.url;

@@ -30,7 +30,7 @@ const Header = () => {
             <img
               src='./images/logo.svg'
               className={styles['nav-logo']}
-              alt='title'
+              alt='DM'
             />
 
             {/* bars */}

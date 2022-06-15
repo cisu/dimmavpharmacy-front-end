@@ -15,7 +15,6 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
 const Offers = ({offers}) => {
 
-  // console.log('offers: ', offers);
 
 
   return (

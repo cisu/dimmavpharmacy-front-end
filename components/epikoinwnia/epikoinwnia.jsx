@@ -3,7 +3,7 @@ import styles from './epikoinwnia.module.scss';
 
 const Epikoinwnia = () => {
   return (
-    <section className={`section`}>
+    <section className={`section ${styles.sectionContainer}`}>
       {/* title  */}
       <div className={`title-wrapper`}>
         <h2 className='title'>
