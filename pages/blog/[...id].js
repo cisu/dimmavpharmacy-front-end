@@ -31,6 +31,7 @@ export default function SingleBlogPage({post}) {
             width={700} 
             height={400} 
             alt={post?.data?.[0]?.attributes?.title} 
+            layout='responsive'
             objectFit='cover'
             />
           </div>

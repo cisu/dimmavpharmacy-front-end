@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
   }
   .hero-banner {
     text-align: center;
@@ -34,8 +35,8 @@
   }
   @media screen and (min-width: 768px) {
     .hero {
-      background: linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7)),
-        url("/images/home_page_img.jpg") center/cover no-repeat;
+      // background: linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7)),
+      //   url("/images/home_page_img.jpg") center/cover no-repeat;
     }
     .hero-title {
       font-size: 4.5rem;

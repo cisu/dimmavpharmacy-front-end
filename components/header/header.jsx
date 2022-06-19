@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styles from './header.module.scss';
 import Link from 'next/link';
 import {MenuItems} from '../../config/menuItems.js';
+import Image from 'next/image';
 
 const Header = () => {
   const [showNavigation, setShowNavigation] = useState(false);
@@ -27,11 +28,25 @@ const Header = () => {
         >
           {/* nav header */}
           <div className={styles['nav-header']}>
-            <img
+           
+            <Link href='/'>
+              
+              <a className={styles['nav-logo']}>
+                {/* <i className='fas fa-clinic-medical' /> */}
+
+                <Image 
+                  src='/logo.png'
+                  width={40}
+                  height={40}
+                  alt={'logo'}
+                />
+              </a>
+            </Link>
+            {/* <img
               src='./images/logo.svg'
               className={styles['nav-logo']}
               alt='DM'
-            />
+            /> */}
 
             {/* bars */}
             <button
@@ -74,22 +89,26 @@ const Header = () => {
           {/* nav social media icons */}
           {/* footer icons */}
           <div className={styles['nav-icons']}>
+            {/* facebook */}
             <a
               href='https://web.facebook.com/dimmavpharmacy/?_rdc=1&_rdr'
               target='_blank'
+              title='Facebook'
               className={styles['nav-icon']}
               rel='noreferrer'
             >
               <i className='fab fa-facebook'></i>
             </a>
-            <a
+
+            {/* twitter */}
+            {/* <a
               href='https://www.twitter.com'
               target='_blank'
               className={styles['nav-icon']}
               rel='noreferrer'
             >
               <i className='fab fa-twitter' />
-            </a>
+            </a> */}
             {/* end of nav social media icons */}
           </div>
         </div>

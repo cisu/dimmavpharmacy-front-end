@@ -31,6 +31,7 @@ const About = () => {
             alt='awesome beach'
             width={675}
             height={510}
+            layout='responsive'
             objectFit='cover'
           />
         </div>
