@@ -4,7 +4,9 @@
 
 /* css variables */
 :root {
-  --primaryColor: #3fd0d4;
+  /* --primaryColor: #3fd0d4; */
+  --primaryColor: #1D8387;
+  
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;

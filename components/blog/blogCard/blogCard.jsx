@@ -33,13 +33,12 @@ const BlogCard = ({blog}) => {
           </div>
           {/* tour footer */}
           <div className={styles.blogFooter}>
-            <h4 className={styles.blogTitle}>{blog?.attributes?.title}</h4>
+            <h3 className={styles.blogTitle}>{blog?.attributes?.title}</h3>
             {/* tour info */}
             <div className={styles.blogInfo}>
               {category && (
                 <p className={styles.blogCategory}>
                   <span>
-                    {/* <i className='fas fa-map' /> */}
                     <i className='fas fa-book-medical'></i>
                   </span>{' '}
                   {category}
@@ -53,6 +52,7 @@ const BlogCard = ({blog}) => {
                   <p>{read_time}</p>
                 </div>
               )}
+
             </div>
           </div>
         </a>

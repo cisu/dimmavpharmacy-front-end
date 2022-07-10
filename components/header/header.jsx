@@ -1,17 +1,41 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import {useRouter} from 'next/router'
 import styles from './header.module.scss';
 import Link from 'next/link';
 import {MenuItems} from '../../config/menuItems.js';
 import Image from 'next/image';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 const Header = () => {
+  const router = useRouter()
+
   const [showNavigation, setShowNavigation] = useState(false);
+  const [search, setSearch] = useState(false)
+
+
+  const [show, setShow] = useState(false);
+
+  useEffect(()=>{
+    setShowNavigation(false)
+  },[router.asPath])
+
+
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
 
   const handleNavigation = () => {
     setShowNavigation(!showNavigation);
   };
 
+  const handleSearch = () => {
+    setSearch(!search)
+  }
+
   return (
+    <>
     <header
       id='home'
       className={styles.header}
@@ -28,25 +52,12 @@ const Header = () => {
         >
           {/* nav header */}
           <div className={styles['nav-header']}>
-           
             <Link href='/'>
-              
               <a className={styles['nav-logo']}>
-                {/* <i className='fas fa-clinic-medical' /> */}
-
-                <Image 
-                  src='/logo.png'
-                  width={40}
-                  height={40}
-                  alt={'logo'}
-                />
+                <Image src='/logo.png' width={'100px'} height={'80px'} alt={'logo'} />
               </a>
             </Link>
-            {/* <img
-              src='./images/logo.svg'
-              className={styles['nav-logo']}
-              alt='DM'
-            /> */}
+
 
             {/* bars */}
             <button
@@ -100,6 +111,15 @@ const Header = () => {
               <i className='fab fa-facebook'></i>
             </a>
 
+
+            
+            
+            <button className={styles.searchBtn} onClick={handleShow}>
+              <i className="fas fa-search" />             
+            </button>
+
+           
+
             {/* twitter */}
             {/* <a
               href='https://www.twitter.com'
@@ -115,7 +135,33 @@ const Header = () => {
       </nav>
 
       {/* {showNavigation && <MobileNav />} */}
+
+      {showNavigation &&
+      <div className={styles.overlay}
+      onClick={()=>{setShowNavigation(false)}}
+      >layout</div>
+      }
+    
     </header>
+
+   
+    
+
+    <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button onClick={handleClose}>
+            Close
+          </Button>
+          <Button  onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 };
 

@@ -50,20 +50,20 @@
     left: 0;
     top: 0;
     background: var(--primaryColor);
-    color: var(--mainBlack);
+    color: var(--mainWhite);
     text-transform: capitalize;
     padding: 0.25rem 0.5rem;
   }
 
   .cardDetails {
-    color: var(--darkGrey);
+    color: #757575;
     display: flex;
     align-items: center;
 
     p{
         line-height: 0.2;
         text-transform: capitalize;
-        color: var(--darkGrey);
+        color: #757575;
         letter-spacing: 0.02rem;
         margin-bottom: 0rem;
         margin-left: 0.3rem

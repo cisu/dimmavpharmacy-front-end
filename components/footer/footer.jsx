@@ -25,22 +25,25 @@ const Footer = () => {
       </div>
       {/* footer icons */}
       <div className='footer-icons'>
+        {/* facebook */}
         <a
           href='https://web.facebook.com/dimmavpharmacy/?_rdc=1&_rdr'
           target='_blank'
           className={styles['footer-icon']}
           rel='noreferrer'
+          title='facebook'
         >
           <i className='fab fa-facebook' />
         </a>
-        <a
+        {/* twitter */}
+        {/* <a
           href='https://www.twitter.com'
           target='_blank'
           className={styles['footer-icon']}
           rel='noreferrer'
         >
           <i className='fab fa-twitter' />
-        </a>
+        </a> */}
         {/* <a href="https://www.twitter.com" target="_blank" className="footer-icon"><i className="fab fa-squarespace" /></a> */}
       </div>
       <p className='copyright'>

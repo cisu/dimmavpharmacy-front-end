@@ -59,6 +59,7 @@ const Epikoinwnia = () => {
           allowFullScreen
           loading='lazy'
           referrerPolicy='no-referrer-when-downgrade'
+          title='Χάρτης με την τοποθεσία του φαρμακείου'
         />
       </div>
     </section>
