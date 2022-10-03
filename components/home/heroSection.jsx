@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './heroSection.module.scss'
 
 const HeroSection = () => {
@@ -6,6 +7,17 @@ const HeroSection = () => {
     <>
       {/* hero component */}
       <div className={styles.hero}>
+
+        <div className={styles.layout} />
+        {/* image */}
+        <div className={styles.image}>
+        <Image 
+          src='/images/home_page_img.jpg'
+          layout='fill'
+          objectFit='cover'
+          alt='Το φαρμακείο μας'
+          />  
+        </div>
         <div className={styles['hero-banner']}>
           <h1 className={styles['hero-title']}>ΚΑΛΩΣ ΗΡΘΑΤΕ!</h1>
           <p className={styles['hero-text']}>

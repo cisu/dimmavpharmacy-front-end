@@ -4,8 +4,8 @@ import styles from './header.module.scss';
 import Link from 'next/link';
 import {MenuItems} from '../../config/menuItems.js';
 import Image from 'next/image';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+// import Button from 'react-bootstrap/Button';
+// import Modal from 'react-bootstrap/Modal';
 
 const Header = () => {
   const router = useRouter()
@@ -113,10 +113,11 @@ const Header = () => {
 
 
             
-            
-            <button className={styles.searchBtn} onClick={handleShow}>
+
+            {/* later for search */}
+            {/* <button className={styles.searchBtn} onClick={handleShow}>
               <i className="fas fa-search" />             
-            </button>
+            </button> */}
 
            
 
@@ -136,18 +137,18 @@ const Header = () => {
 
       {/* {showNavigation && <MobileNav />} */}
 
-      {showNavigation &&
+      {/* {showNavigation &&
       <div className={styles.overlay}
       onClick={()=>{setShowNavigation(false)}}
-      >layout</div>
+      ></div>
       }
-    
+     */}
     </header>
 
    
     
 
-    <Modal show={show} onHide={handleClose}>
+    {/* <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
@@ -160,7 +161,7 @@ const Header = () => {
             Save Changes
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
     </>
   );
 };
